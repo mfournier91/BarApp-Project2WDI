@@ -31,6 +31,13 @@ class HappyhoursController < ApplicationController
     end
   end
 
+  def destroy
+    @bar = Bar.find(params[:bar_id])
+    @happyhour = Happyhour.find(params[:id])
+    @happyhour.destroy
+    redirect_to bar_happyhours_path(@bar)
+  end
+
   private
   def happyhour_params
     params.require(:happyhour).permit(:hours, :weekday)
