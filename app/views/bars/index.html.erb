@@ -1,7 +1,7 @@
 <% @bars.each do |bar| %>
 <div class="bar">
+  <h2><a href="<%= bar_path(bar) %>"><%= bar.name %></a></h2>
   <%= image_tag(bar.img_url) %>
-  <h3><a href="<%= bar_path(bar) %>"><%= bar.name %></a></h3>
   <h4><%= bar.address %></h4>
 </div>
 <% end %>
