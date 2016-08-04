@@ -2,4 +2,9 @@
 <% @happyhours.each do |happyhour| %>
 <h3><%= happyhour.weekday %></h3>
 <h4><%= happyhour.hours %></h4>
+<%= link_to 'edit', edit_bar_happyhour_path(@bar, happyhour)%>
+<%= link_to 'DELETE', bar_happyhour_path(@bar, happyhour), method: :delete%>
+<br>
+<br>
 <% end %>
+<h5><%= link_to 'Add More happy hours', new_bar_happyhour_path(@bar) %></h5>
