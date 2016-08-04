@@ -16,6 +16,21 @@ class HappyhoursController < ApplicationController
     redirect_to bar_happyhours_path(@bar)
   end
 
+  def edit
+    @bar = Bar.find(params[:bar_id])
+    @happyhour = Happyhour.find(params[:id])
+  end
+
+  def update
+    @bar = Bar.find(params[:bar_id])
+    @happyhour = Happyhour.find(params[:id])
+    if @happyhour.update(happyhour_params)
+      redirect_to bar_happyhours_path(@bar)
+    else
+      render 'edit'
+    end
+  end
+
   private
   def happyhour_params
     params.require(:happyhour).permit(:hours, :weekday)

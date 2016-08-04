@@ -1,0 +1,10 @@
+<h2>Edit these happy hours</h2>
+<%= form_for [@bar, @happyhour] do |f|%>
+<%= f.label :weekday %>
+<%= f.text_field :weekday %>
+
+<%= f.label :hours %>
+<%= f.text_field :hours %>
+
+<%= f.submit %>
+<% end %>
