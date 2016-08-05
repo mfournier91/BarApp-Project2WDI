@@ -1,3 +1,9 @@
+<% flash.each do |type, message| %>
+  <p class="<%= type %>">
+    <%= message %>
+  </p>
+<% end %>
+
 <h2><%= @bar.name %> - Happy Hours</h2>
 <% @happyhours.each do |happyhour| %>
 <h3><%= happyhour.weekday %></h3>

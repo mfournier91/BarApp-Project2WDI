@@ -11,9 +11,13 @@ class HappyhoursController < ApplicationController
 
   def create
     @bar = Bar.find(params[:bar_id])
-    @happyhour = @bar.happyhours.create!(happyhour_params)
-
-    redirect_to bar_happyhours_path(@bar)
+    @happyhour = @bar.happyhours.new(happyhour_params)
+    if @happyhour.save
+      flash[:notice] = "Happyhour successfully created"
+      redirect_to bar_happyhours_path(@bar)
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -25,6 +29,7 @@ class HappyhoursController < ApplicationController
     @bar = Bar.find(params[:bar_id])
     @happyhour = Happyhour.find(params[:id])
     if @happyhour.update(happyhour_params)
+      flash[:notice] = "Happyhour successfully edited"
       redirect_to bar_happyhours_path(@bar)
     else
       render 'edit'
