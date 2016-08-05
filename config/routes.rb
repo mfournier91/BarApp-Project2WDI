@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
 root 'bars#index'
 resources :bars do
-  resources :happyhours do
-    resources :menu_items
+  resources :happyhours, except: :show do
+    resources :menu_items, except: :show
   end
 end
 end
