@@ -3,3 +3,4 @@
 <% @menu_items.each do |item| %>
   <p><%= item.name%>: <%= item.price %></p>
 <% end %>
+<%= link_to 'New menu item', new_bar_happyhour_menu_item_path(@bar, @happyhour) %>
