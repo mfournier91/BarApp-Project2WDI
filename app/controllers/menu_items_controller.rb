@@ -24,6 +24,27 @@ class MenuItemsController < ApplicationController
     end
   end
 
+  def edit
+    @bar = Bar.find(params[:bar_id])
+    @happyhour = Happyhour.find(params[:happyhour_id])
+    @menu_item = MenuItem.find(params[:id])
+  end
+
+  def update
+    @bar = Bar.find(params[:bar_id])
+    @happyhour = Happyhour.find(params[:happyhour_id])
+    @menu_item = MenuItem.find(params[:id])
+    if @menu_item.update(menu_item_params)
+      flash[:notice] = "Menu Item successfully updated"
+      redirect_to bar_happyhour_menu_items_path(@bar, @happyhour)
+    else
+     render 'edit'
+   end
+  end
+
+
+
+
 private
   def menu_item_params
     params.require(:menu_item).permit(:name, :price)

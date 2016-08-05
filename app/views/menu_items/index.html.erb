@@ -2,5 +2,7 @@
 <h3><%= @happyhour.hours %></h3>
 <% @menu_items.each do |item| %>
   <p><%= item.name%>: $<%= item.price %></p>
-<% end %>
+  <%= link_to 'Edit menu item', edit_bar_happyhour_menu_item_path(@bar, @happyhour, item)%> <br>
+ <% end %>
+ <br>
 <%= link_to 'New menu item', new_bar_happyhour_menu_item_path(@bar, @happyhour) %>
