@@ -3,6 +3,7 @@
 <% @menu_items.each do |item| %>
   <p><%= item.name%>: $<%= item.price %></p>
   <%= link_to 'Edit menu item', edit_bar_happyhour_menu_item_path(@bar, @happyhour, item)%> <br>
+  <%= link_to 'DELETE menu item', bar_happyhour_menu_item_path(@bar, @happyhour, item), method: :delete%> <br>
  <% end %>
  <br>
 <%= link_to 'New menu item', new_bar_happyhour_menu_item_path(@bar, @happyhour) %>

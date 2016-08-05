@@ -42,6 +42,14 @@ class MenuItemsController < ApplicationController
    end
   end
 
+  def destroy
+    @bar = Bar.find(params[:bar_id])
+    @happyhour = Happyhour.find(params[:happyhour_id])
+    @menu_item = MenuItem.find(params[:id])
+    @menu_item.destroy
+    redirect_to bar_happyhour_menu_items_path(@bar, @happyhour)
+  end
+
 
 
 
