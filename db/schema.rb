@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803222501) do
+ActiveRecord::Schema.define(version: 20160805152942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,5 +32,15 @@ ActiveRecord::Schema.define(version: 20160803222501) do
     t.index ["bar_id"], name: "index_happyhours_on_bar_id", using: :btree
   end
 
+  create_table "menu_items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "price"
+    t.integer  "happyhour_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["happyhour_id"], name: "index_menu_items_on_happyhour_id", using: :btree
+  end
+
   add_foreign_key "happyhours", "bars"
+  add_foreign_key "menu_items", "happyhours"
 end
