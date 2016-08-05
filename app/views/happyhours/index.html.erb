@@ -7,7 +7,7 @@
 <h2><%= @bar.name %> - Happy Hours</h2>
 <% @happyhours.each do |happyhour| %>
 <h3><%= happyhour.weekday %></h3>
-<h4><%= happyhour.hours %></h4>
+<h4><%=happyhour.hours + ' | '%><%= link_to 'Menu Items', bar_happyhour_menu_items_path(@bar, happyhour) %></h4>
 <%= link_to 'edit', edit_bar_happyhour_path(@bar, happyhour)%>
 <%= link_to 'DELETE', bar_happyhour_path(@bar, happyhour), method: :delete%>
 <br>
