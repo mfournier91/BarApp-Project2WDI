@@ -1,3 +1,8 @@
+<% flash.each do |type, message| %>
+  <p class="<%= type %>">
+    <%= message %>
+  </p>
+<% end %>
 <h2><%= @bar.name %></h2>
 <%= image_tag(@bar.img_url) %>
 <h4><%= @bar.address %></h4>

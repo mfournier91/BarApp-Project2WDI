@@ -19,7 +19,10 @@ class BarsController < ApplicationController
   def create
     @bar = Bar.new bar_params
     if @bar.save
+      flash[:notice] = "Bar successfully created"
       redirect_to @bar
+    else
+      render 'new'
     end
   end
 
@@ -27,6 +30,7 @@ class BarsController < ApplicationController
     @bar = Bar.find(params[:id])
 
     if @bar.update(bar_params)
+      flash[:notice] = "Bar successfully edited"
       redirect_to @bar
     else
       render 'edit'
