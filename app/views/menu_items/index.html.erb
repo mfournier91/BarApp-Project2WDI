@@ -1,0 +1,5 @@
+<h2><%= @bar.name %> - <%= @happyhour.weekday %></h2>
+<h3><%= @happyhour.hours %></h3>
+<% @menu_items.each do |item| %>
+  <p><%= item.name%>: <%= item.price %></p>
+<% end %>
