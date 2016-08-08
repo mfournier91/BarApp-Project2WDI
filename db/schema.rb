@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808153741) do
+ActiveRecord::Schema.define(version: 20160808201638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20160808153741) do
     t.string   "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "bar_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bar_id"], name: "index_favorites_on_bar_id", using: :btree
+    t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
   create_table "happyhours", force: :cascade do |t|
@@ -59,6 +68,8 @@ ActiveRecord::Schema.define(version: 20160808153741) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "favorites", "bars"
+  add_foreign_key "favorites", "users"
   add_foreign_key "happyhours", "bars"
   add_foreign_key "menu_items", "happyhours"
 end
