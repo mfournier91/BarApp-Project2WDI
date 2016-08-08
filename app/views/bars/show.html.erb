@@ -2,9 +2,9 @@
 <h2><%= @bar.name %></h2>
 <% if user_signed_in? %>
   <% unless current_user.bars.exists?(id: @bar) %>
-<%= link_to "&hearts;".html_safe, add_favorite_bar_path(@bar), method: :post, class: "no-fav" %>
+<%= link_to "&hearts;".html_safe, add_favorite_bar_path(@bar), method: :post, class: "no-fav" %><br />
   <% else %>
-  <%= link_to "&hearts;".html_safe, remove_favorite_bar_path(@bar), method: :delete, class: "fav" %>
+  <%= link_to "&hearts;".html_safe, remove_favorite_bar_path(@bar), method: :delete, class: "fav" %><br />
   <% end %>
 <% end %>
 <%= image_tag(@bar.img_url) %>

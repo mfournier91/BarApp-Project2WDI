@@ -11,7 +11,7 @@ end
 
 resources :users, only: [:show, :index]
 
-get 'user/:id/favorites', to: 'users#favorites'
+get 'users/:id/favorites', to: 'users#favorites'
 
 resources :bars do
   member do

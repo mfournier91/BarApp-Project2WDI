@@ -4,3 +4,7 @@
   registration link.
 </p>
 <p>Look at other <%= link_to 'users', users_path %>. There might be a friendship feature in the future.</p>
+
+<p>
+  Checkout your <%= link_to 'favorites', "/users/#{@user.id}/favorites" %>
+</p>

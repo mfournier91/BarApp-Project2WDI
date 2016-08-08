@@ -9,4 +9,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def favorites
+    @user = current_user
+  end
+
 end

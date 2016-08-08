@@ -1,0 +1,7 @@
+<h3>List of <%= @user.name %>'s favorites</h3>
+
+<ul>
+<% @user.favorites.each do |favorite| %>
+  <li><%= link_to favorite.bar.name, bar_path(favorite.bar) %></li>
+<% end %>
+</ul>
