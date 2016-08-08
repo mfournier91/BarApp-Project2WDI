@@ -8,4 +8,7 @@ resources :bars do
     resources :menu_items, except: :show
   end
 end
+
+resources :users, only: [:show, :index]
+
 end
