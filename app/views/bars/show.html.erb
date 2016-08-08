@@ -1,5 +1,12 @@
 
 <h2><%= @bar.name %></h2>
+<% if user_signed_in? %>
+  <% unless current_user.bars.exists?(id: @bar) %>
+<%= link_to "&hearts;".html_safe, add_favorite_bar_path(@bar), method: :post, class: "no-fav" %>
+  <% else %>
+  <%= link_to "&hearts;".html_safe, remove_favorite_bar_path(@bar), method: :delete, class: "fav" %>
+  <% end %>
+<% end %>
 <%= image_tag(@bar.img_url) %>
 <h4><%= @bar.address %></h4>
 <%= link_to 'Happy hours', bar_happyhours_path(@bar) %>

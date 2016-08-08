@@ -37,6 +37,18 @@ class BarsController < ApplicationController
     end
   end
 
+  def add_favorite
+    @bar = Bar.find(params[:id])
+    @bar.favorites.create(user: current_user)
+    redirect_to @bar
+  end
+
+  def remove_favorite
+    @bar = Bar.find(params[:id])
+    @bar.favorites.where(user: current_user).destroy_all
+    redirect_to bars_path
+  end
+
   def destroy
     @bar = Bar.find(params[:id])
     @bar.destroy

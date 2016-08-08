@@ -11,4 +11,15 @@ end
 
 resources :users, only: [:show, :index]
 
+get 'user/:id/favorites', to: 'users#favorites'
+
+resources :bars do
+  member do
+    post 'add_favorite'
+    delete 'remove_favorite'
+  end
+end
+
+
+
 end

@@ -17,3 +17,11 @@
  .notice {
    color:blue;
  }
+
+ .fav {
+   color: red;
+
+ }
+ .no-fav {
+   color: black;
+ }
