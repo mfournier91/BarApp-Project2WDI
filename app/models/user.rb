@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :bars, through: :favorites
   validates :name, presence: true
+
+  has_many :conversations, :foreign_key => :sender_id
 end
