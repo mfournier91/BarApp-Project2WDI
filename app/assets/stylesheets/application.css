@@ -1,22 +1,22 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
- .notice {
-   color:blue;
- }
+.notice {
+  color:blue;
+}
 
 .alert {
   color:red;
@@ -47,7 +47,8 @@ h2 {
 }
 
 body {
-  color: #555;
+  color: #ddd;
+  text-shadow: 1px 1px 1px black;
 }
 
 h1, h2, strong {
@@ -78,11 +79,21 @@ body img {
   border-radius: 5px;
 }
 
- .fav {
-   color: red;
+.fav {
+  color: red;
 
- }
- .no-fav {
-   color: black;
-   text-shadow: none;
- }
+}
+.no-fav {
+  color: black;
+  text-shadow: none;
+}
+
+footer {
+  border-top: 1px solid rgba(221, 221, 221, 0.84);
+  margin: 10px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+}
