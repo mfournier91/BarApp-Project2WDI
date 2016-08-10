@@ -51,7 +51,11 @@ class BarsController < ApplicationController
 
   def destroy
     @bar = Bar.find(params[:id])
-    @bar.destroy
+    if @bar.favorites.length > 0
+      flash[:alert] = "A user has favorited that bar. Can't delete a favorited bar."
+    else
+      @bar.destroy
+    end
     redirect_to bars_path
   end
 
