@@ -18,10 +18,71 @@
    color:blue;
  }
 
+.alert {
+  color:red;
+}
+
+html {
+
+  background: url("blurred_bar.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+  padding: 4em 1em;
+  background: rgba(236, 162, 75, .4)
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+body {
+  color: #555;
+}
+
+h1, h2, strong {
+  color: #333;
+}
+
+img {
+  width: 12em;
+}
+
+.title {
+  font-family: 'Lobster Two', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #fb3;
+  text-shadow: 2px 2px black;
+}
+
+a:hover {
+  color: #911;
+  text-shadow: 1px 1px black;
+}
+
+body img {
+  border: 5px solid #82000b;
+  border-radius: 5px;
+}
+
  .fav {
    color: red;
 
  }
  .no-fav {
    color: black;
+   text-shadow: none;
  }
