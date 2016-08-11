@@ -12,7 +12,7 @@ so I can know if it is a good happy hour. (i.e. create a third model nested in
 3. I only want users who are signed in to be able to edit/create/delete anything
  so that people will be less likely to delete the database for fun. -Silver
 4. I should be able to favorite/unfavorite bars and view my favorites. -Silver
-4.5 Implement messages between users. (Learn how then remove the feature until
+  * 4.a Implement messages between users. (Learn how then remove the feature until
 creating a friendship model) -Gold
 5. I should be able to make a viable week schedule to attend happy hours (i.e
 select half hour periods of time within a happy hour and be prevented from
