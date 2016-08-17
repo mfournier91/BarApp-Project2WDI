@@ -25,7 +25,7 @@
 
 html {
 
-  background: url("blurred_bar.jpg") no-repeat center center fixed;
+  background: image-url("blurred_bar.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
