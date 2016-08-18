@@ -24,9 +24,9 @@ Approach taken:
 
 Installation :
 
-* For now, go to https://github.com/mfournier91/BarApp-Project2WDI and clone. CD into the directory and type rails s into the terminal. Wait for the server to start and enter localhost:3000 into your browser.
+* To host locally, go to https://github.com/mfournier91/BarApp-Project2WDI and clone. CD into the directory and type rails s into the terminal. Wait for the server to start and enter localhost:3000 into your browser.
 
-* Within a few days of the commit which contains these instructions in this readme, I intend to host this app on Heroku. I plan to update this readme to link there. If I negelect to do so and you want to see it, post an issue.
+* Otherwise go to https://happy-trale.herokuapp.com/
 
 Unsolved problems:
 
