@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def index
+    # is this for pagination purposes? you shoudl check out a gem called will_paginate
     @messages = @conversation.messages
     if @messages.length > 10
       @over_ten = true

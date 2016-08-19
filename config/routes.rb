@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'bars#index'
   resources :bars do
     resources :happyhours, except: :show do
+      # seems like menu items should be nested under bars and maybe something like deals should be nested under happyhours
       resources :menu_items, except: :show
     end
   end

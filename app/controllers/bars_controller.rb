@@ -51,6 +51,7 @@ class BarsController < ApplicationController
 
   def destroy
     @bar = Bar.find(params[:id])
+    # this seems like either a feature or barrier. Also, brings into question should users be able to delete bars in general
     if @bar.favorites.length > 0
       flash[:alert] = "A user has favorited that bar. Can't delete a favorited bar."
     else
