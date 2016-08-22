@@ -5,6 +5,7 @@ class ConversationsController < ApplicationController
     @conversations = Conversation.all
   end
   def create
+    # although this scope is cool, not really sure whats happening here, It seems like to me that the conversatiosn can only be one way, and that a new conversation would be have to be created for the other direction. It'd be nice if they could talk to each other through messages.
     if Conversation.between(params[:sender_id],params[:recipient_id]).present?
       @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
     else

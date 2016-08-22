@@ -24,6 +24,7 @@ Approach taken:
 
 Installation :
 
+// think your missing some steps here, (rake db:create db:migrate etc etc..)
 * To host locally, go to https://github.com/mfournier91/BarApp-Project2WDI and clone. CD into the directory and type rails s into the terminal. Wait for the server to start and enter localhost:3000 into your browser.
 
 * Otherwise go to https://happy-trale.herokuapp.com/

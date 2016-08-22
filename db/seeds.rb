@@ -37,3 +37,5 @@ MenuItem.create!(name: 'Heineken, Fat tire, Hoegaarden', price: '5.00', happyhou
 MenuItem.create!(name: 'Half smoke', price: '3.00', happyhour:bobhr1)
 MenuItem.create!(name: 'Half smoke', price: '3.00', happyhour:bobhr2)
 MenuItem.create!(name: 'Domestic beers', price: '5.00', happyhour:bobhr2)
+
+# I would also create seed data for users/conversations/messages so that collaborators can immediately start looking at those feature too instead of using the UI to build out the data.
